@@ -145,9 +145,7 @@ app.post('/task',(req,res)=>{
 
 app.get("/task", (req,res)=>{
      return res.json(task);
-})
-
-
+});
 
 
 app.put('/task/:id', (req, res) => {
@@ -187,10 +185,10 @@ app.get ('/task/:title', (req,res)=>{
      const target1 = task.filter((i) => {
           return i.title.indexOf("search text") > -1;})
           return res.json(taskTitle);
-//      if(taskTitle<t.length){
-//     res.render( 'show', student)}
-//     else
-//     res.render( 'errorMessage')
+
 })
 
-app.listen(3000);
+const PORT =5000;
+app.listen(PORT, ()=>{
+     console.log(`server listeng on port ${PORT}`)
+});
